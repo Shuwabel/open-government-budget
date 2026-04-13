@@ -22,7 +22,7 @@
 - **Dependencies**: Show project relationships
 - **Calendar View**: Monthly/weekly project view
 
-**Impact**: High - Better project management
+**Impact**: High - Better project managements
 
 ---
 
