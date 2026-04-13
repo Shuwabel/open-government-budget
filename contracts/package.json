@@ -1,0 +1,30 @@
+{
+  "name": "government-budget-transparency",
+  "version": "1.0.0",
+  "description": "Smart contracts for Government Budget Transparency System",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:polygon": "hardhat run scripts/deploy.js --network polygon",
+    "deploy:mumbai": "hardhat run scripts/deploy.js --network mumbai",
+    "verify": "hardhat verify"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.3"
+  },
+  "keywords": [
+    "blockchain",
+    "government",
+    "transparency",
+    "budget",
+    "solidity"
+  ],
+  "author": "Government Budget Transparency System",
+  "license": "MIT"
+}
+

@@ -1,0 +1,14 @@
+{
+  "network": "polygon",
+  "timestamp": "2025-10-22T21:32:54.799Z",
+  "contracts": {
+    "BudgetTransparency": {
+      "address": "0x33b1Ff27Ba5bD2Ed1461a71AF27bC58E4be56E74",
+      "transactionHash": "0x6eb0cecb723396a409ba4f3194b1b356156a57f2c5030260f6f6196c9ebf7058"
+    },
+    "BudgetCertificate": {
+      "address": "0x9F63a500e67B315E57e504c879837619BAD0DA76",
+      "transactionHash": "0x190736b89ac9c208476b1ae0b2a5a327a2816cf15667012b933d70d6f027894f"
+    }
+  }
+}

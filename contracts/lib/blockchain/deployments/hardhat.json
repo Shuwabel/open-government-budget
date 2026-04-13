@@ -1,0 +1,14 @@
+{
+  "network": "hardhat",
+  "timestamp": "2025-10-22T21:21:34.392Z",
+  "contracts": {
+    "BudgetTransparency": {
+      "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "transactionHash": "0x9fee7630dd0af8fc522acd2e9445d08bd80e99befad7e19279326bf970afe497"
+    },
+    "BudgetCertificate": {
+      "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "transactionHash": "0x784406c0f89982fafd621bc9b7457e45de44c7535095b4062cae3b29d46d9ad6"
+    }
+  }
+}
