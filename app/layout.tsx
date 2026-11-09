@@ -1,42 +1,36 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Poppins } from "next/font/google"
-import { Geist, Geist_Mono } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
-import { Toaster } from "sonner"
+import type { Metadata, Viewport } from "next"
+import { Geist, Geist_Mono, Newsreader } from "next/font/google"
+import { Providers } from "@/components/providers"
+import { Shell } from "@/components/shell"
 import "./globals.css"
 
-const poppins = Poppins({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-  variable: "--font-poppins",
-})
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
+const sans = Geist({ subsets: ["latin"], variable: "--f-sans", display: "swap" })
+const mono = Geist_Mono({ subsets: ["latin"], variable: "--f-mono", display: "swap" })
+const serif = Newsreader({ subsets: ["latin"], variable: "--f-serif", display: "swap", style: ["normal", "italic"] })
 
 export const metadata: Metadata = {
-  title: "Government Budget Transparency System",
-  description: "Blockchain-based government budget tracking and transparency platform",
-  generator: "v0.app",
+  title: { default: "Ogbe Budget Ledger", template: "%s · Ogbe Budget Ledger" },
+  description:
+    "A portfolio demo of public budget tracking: allocations, payments to contractors and spending reports, recorded in a hash-chained ledger anyone can check in the browser. Fictional data, simulated ledger.",
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f4f1e8" },
+    { media: "(prefers-color-scheme: dark)", color: "#0e1613" },
+  ],
+}
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className={`${poppins.variable} font-sans antialiased`}>
-        {children}
-        <Toaster position="top-right" richColors />
-        <Analytics />
+    <html lang="en" suppressHydrationWarning className={`${sans.variable} ${mono.variable} ${serif.variable}`}>
+      <body>
+        <a href="#main" className="skip">
+          Skip to content
+        </a>
+        <Providers>
+          <Shell>{children}</Shell>
+        </Providers>
       </body>
     </html>
   )
